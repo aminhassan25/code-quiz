@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <title>Coding Quiz</title>
+</head>
+
+<body>
+    <h1>Coding Quiz</h1>
+
+    <section id="stopwatch">Timer
+        <p id="timer">0</p>
+        <p id="fulltime"></p>
+    </section>
+
+    <div class="quiz-container">
+        <div id="question" class="question">Questions</div>
+        <label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
+        <label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
+        <label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
+        <label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
+        <br>
+        <button id="start" onclick="clock();loadQuestion(currentQuestion);">Start</button>
+        <button id="next" onclick="loadNextQuestion();">Next</button><br>
+        <button id="submit" onclick="clearInterval(myTimer);disableButton()">Finish</button>
+        <form style="display: inline" action="highscores.html" method="get">
+            <button>Scores</button>
+        </form>
+    </div>
+
+    <script src="assets/css/test questions.js"></script>
+    <script src="assets/style.js"></script>
+
+
+</body>
+
+</html>
